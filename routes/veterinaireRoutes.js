@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const Veterinaire = require('../models/Veterinaire');
 
-// 🟢 GET /api/veterinaires : récupérer tous les vétérinaires
+// GET /api/veterinaires : récupérer tous les vétérinaires
 router.get('/', async (req, res) => {
   try {
     const vets = await Veterinaire.find();
@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// 🟢 POST /api/veterinaires : ajouter un nouveau vétérinaire
+// POST /api/veterinaires : ajouter un nouveau vétérinaire
 router.post('/', async (req, res) => {
   const { nom, specialite, telephone } = req.body;
 
