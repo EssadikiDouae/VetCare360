@@ -30,7 +30,7 @@ router.get('/:id', async (req, res) => {
         nom: animal.nom,
         visites: animal.visites.map(visite => ({
           id: visite._id,
-          date: new Date(visite.date).toLocaleDateString('fr-FR'), // تنسيق التاريخ
+          date: new Date(visite.date).toLocaleDateString('fr-FR'), 
           raison: visite.raison
         }))
       }))
