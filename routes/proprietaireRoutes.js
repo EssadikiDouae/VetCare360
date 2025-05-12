@@ -32,7 +32,7 @@ router.get('/search', async (req, res) => {
   }
 });
 
-// ✅ جلب جميع المالكين (مع الحيوانات التي يملكونها)
+
 router.get('/', async (req, res) => {
   try {
     const proprietaires = await Proprietaire.find().populate('animaux');
@@ -43,7 +43,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// ✅ جلب مالك واحد (مع حيواناته وزياراتهم)
+
 router.get('/:id', async (req, res) => {
   try {
     console.log('Fetching proprietaire with ID:', req.params.id);
@@ -87,7 +87,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// ✅ إضافة مالك جديد
+
 router.post('/', async (req, res) => {
   try {
     console.log('Received request body:', req.body);
@@ -138,7 +138,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// ✅ تحديث بيانات المالك
+
 router.put('/:id', async (req, res) => {
   try {
     console.log('Updating owner with ID:', req.params.id);
@@ -193,7 +193,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-// مسار لحذف مالك
+
 router.delete('/:id', async (req, res) => {
   console.log('DELETE request received for owner:', req.params.id);
   
